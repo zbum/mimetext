@@ -8,7 +8,7 @@ $ mimetext -d '=?utf-8?B?6rCA64KY64uk6528?='
 ```
 
 ## build
-* install GraalVM 
+* install GraalVM with SdkMan
 ```shell
 $ sdk install java 21.0.0.2.r11-grl
 ```

@@ -1,7 +1,5 @@
 package kr.co.manty.command.mimetext;
 
-import com.sun.mail.imap.protocol.BASE64MailboxDecoder;
-import com.sun.mail.imap.protocol.BASE64MailboxEncoder;
 import org.apache.commons.cli.*;
 
 import javax.mail.internet.MimeUtility;
@@ -9,9 +7,11 @@ import java.io.UnsupportedEncodingException;
 
 public class MimeTestApplication {
     public static void main(String[] args) {
+        Option help = new Option("h", "help", false , "print help.");
         Option decode = new Option("d", "decode", true, "decode utf7");
         Option encode = new Option("e", "encode", true, "encode utf7");
         Options options = new Options();
+        options.addOption(help);
         options.addOption(decode);
         options.addOption(encode);
 
@@ -27,6 +27,10 @@ public class MimeTestApplication {
 
         String output = null;
         try {
+            if ( commandLine.hasOption("help")) {
+                HelpFormatter helpFormatter = new HelpFormatter();
+                helpFormatter.printHelp("mimetext -e '가나다라'", options);
+            }
             if ( commandLine.hasOption("decode")) {
                 output = MimeUtility.decodeText(commandLine.getOptionValue("decode"));
             }

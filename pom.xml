@@ -49,7 +49,7 @@
                 </executions>
                 <configuration>
                     <imageName>mimetext</imageName>
-                    <mainClass>kr.co.manty.command.mimetext.MimeTestApplication</mainClass>
+                    <mainClass>kr.co.manty.command.mimetext.MimeTextApplication</mainClass>
                     <skip>false</skip>
                     <buildArgs>
                         --no-fallback

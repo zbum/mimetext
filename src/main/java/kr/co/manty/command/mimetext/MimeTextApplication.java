@@ -5,11 +5,11 @@ import org.apache.commons.cli.*;
 import javax.mail.internet.MimeUtility;
 import java.io.UnsupportedEncodingException;
 
-public class MimeTestApplication {
+public class MimeTextApplication {
     public static void main(String[] args) {
         Option help = new Option("h", "help", false , "print help.");
-        Option decode = new Option("d", "decode", true, "decode utf7");
-        Option encode = new Option("e", "encode", true, "encode utf7");
+        Option decode = new Option("d", "decode", true, "decode mimetext");
+        Option encode = new Option("e", "encode", true, "encode mimetext");
         Options options = new Options();
         options.addOption(help);
         options.addOption(decode);
